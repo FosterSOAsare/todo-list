@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgba(255, 0, 0, 0.699);
+  padding: 0 20px;
+}
+
+header .header__left,
+header .header__right {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: grey;
+}
+
+header .header__right {
+  margin-inline: auto;
+  width: 35%;
+}
+
+header .header__left i {
+  font-size: 20px;
+}
+
+main {
+  width: 100%;
+  height: 90vh;
+}
+
+main #new {
+  height: auto;
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  display: none;
+}
+
+main #new form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+main #new form input,
+main #new form button {
+  width: auto;
+  height: 50px;
+  border: none;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 2px 2px 9px grey;
+}
+
+main #new form input {
+  background: linear-gradient(145deg, #dddddd, #ffffff);
+  width: 70%;
+  padding: 0 10px;
+}
+
+main #new form input:focus {
+  outline: none;
+}
+
+main #new form button {
+  width: 25%;
+  background: linear-gradient(145deg, #73dddd, #89ffff);
+}
+
+main #todos {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+main #todos .todo {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+main #todos .todo .content {
+  width: 83%;
+  height: 100%;
+  background-color: pink;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main #todos .todo .content p {
+  color: black;
+  opacity: 0.7;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+main #todos .todo .actions {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3px;
+}
+
+main #todos .todo .actions div {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+main #todos .todo .actions div:hover {
+  background-color: rgba(128, 128, 128, 0.747);
+  cursor: pointer;
+}
+
+main #todos .todo .actions div:hover i {
+  opacity: 1;
+}
+
+main #todos .todo .actions div i {
+  opacity: 0.5;
+  font-size: 13px;
+}
+
+main #todos .todo .actions div i.fa-trash {
+  color: red;
+}
+
+main #todos .noTasks {
+  width: 280px;
+  height: 280px;
+  background-color: pink;
+  border-radius: 50%;
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: grey;
+}
+
+main #todos .noTasks i {
+  font-size: 96px;
+}
+
+main #todos .noTasks p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+main .plus {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  background-color: pink;
+  font-size: 30px;
+  font-weight: bold;
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
