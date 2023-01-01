@@ -121,9 +121,6 @@ function deleteTodos() {
       // Clear Input field and Hide Input Field showing the plus sign
       let input = addTaskForm.querySelector('input') as HTMLInputElement;
       input.value = '';
-      newForm.style.display = 'none';
-      plus.style.display = 'flex';
-
       // Display new task
       createTodoItem(data);
     }
@@ -150,3 +147,5 @@ function checkTask(content: string, event: any) {
   // Store Data
   localStorage.setItem('todos', JSON.stringify(todos));
 }
+
+// Add drags to set priority
