@@ -10,6 +10,7 @@ body {
   width: 100%;
   height: 100vh;
   background-color: #f5f5f5;
+  padding-top: 80px;
 }
 
 header {
@@ -20,8 +21,14 @@ header {
   align-items: center;
   border-bottom: 2px solid rgba(255, 0, 0, 0.699);
   padding: 0 20px;
+  position: fixed;
+  background-color: #f5f5f5;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 3;
 }
-
 header .header__left,
 header .header__right {
   width: 40px;
@@ -32,21 +39,38 @@ header .header__right {
   font-weight: bold;
   color: grey;
 }
-
 header .header__right {
   margin-inline: auto;
   width: 35%;
 }
-
 header .header__left i {
   font-size: 20px;
+}
+header .theme__toggle {
+  width: 50px;
+  height: 20px;
+  background-color: black;
+  border-radius: 10px;
+  position: relative;
+}
+header .theme__toggle .switch {
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 5px;
 }
 
 main {
   width: 100%;
-  height: 90vh;
+  min-height: 80vh;
+  height: auto;
+  padding: 10px 0;
 }
-
 main #new {
   height: auto;
   width: 100%;
@@ -54,7 +78,6 @@ main #new {
   padding-bottom: 20px;
   display: none;
 }
-
 main #new form {
   width: 100%;
   height: 100%;
@@ -63,7 +86,6 @@ main #new form {
   align-items: center;
   padding: 0 20px;
 }
-
 main #new form input,
 main #new form button {
   width: auto;
@@ -73,28 +95,23 @@ main #new form button {
   border-radius: 5px;
   box-shadow: 2px 2px 9px grey;
 }
-
 main #new form input {
   background: linear-gradient(145deg, #dddddd, #ffffff);
   width: 70%;
   padding: 0 10px;
 }
-
 main #new form input:focus {
   outline: none;
 }
-
 main #new form button {
   width: 25%;
   background: linear-gradient(145deg, #73dddd, #89ffff);
 }
-
 main #todos {
   width: 100%;
   height: auto;
   margin-top: 20px;
 }
-
 main #todos .todo {
   width: 100%;
   height: 50px;
@@ -104,7 +121,6 @@ main #todos .todo {
   align-items: center;
   padding: 0 10px;
 }
-
 main #todos .todo .content {
   width: 83%;
   height: 100%;
@@ -113,7 +129,6 @@ main #todos .todo .content {
   justify-content: flex-start;
   align-items: center;
 }
-
 main #todos .todo .content p {
   color: black;
   opacity: 0.7;
@@ -121,7 +136,6 @@ main #todos .todo .content p {
   font-size: 14px;
   font-weight: normal;
 }
-
 main #todos .todo .actions {
   width: 15%;
   height: 100%;
@@ -130,7 +144,6 @@ main #todos .todo .actions {
   align-items: center;
   padding: 0 3px;
 }
-
 main #todos .todo .actions div {
   width: 25px;
   height: 25px;
@@ -139,25 +152,20 @@ main #todos .todo .actions div {
   align-items: center;
   border-radius: 50%;
 }
-
 main #todos .todo .actions div:hover {
   background-color: rgba(128, 128, 128, 0.747);
   cursor: pointer;
 }
-
 main #todos .todo .actions div:hover i {
   opacity: 1;
 }
-
 main #todos .todo .actions div i {
   opacity: 0.5;
   font-size: 13px;
 }
-
 main #todos .todo .actions div i.fa-trash {
   color: red;
 }
-
 main #todos .noTasks {
   width: 280px;
   height: 280px;
@@ -170,16 +178,13 @@ main #todos .noTasks {
   flex-direction: column;
   color: grey;
 }
-
 main #todos .noTasks i {
   font-size: 96px;
 }
-
 main #todos .noTasks p {
   margin-top: 20px;
   text-align: center;
 }
-
 main .plus {
   width: 60px;
   height: 60px;
@@ -196,10 +201,46 @@ main .plus {
   left: 0;
   right: 0;
   margin: 0 auto;
+  box-shadow: 2px 2px 5px grey, -2px -2px 5px grey;
 }
 
 main,
 header {
   max-width: 500px;
   margin: 0 auto;
+}
+
+.dark {
+  background-color: #1e1e1e;
+}
+.dark header {
+  background-color: #1e1e1e;
+  opacity: 1;
+}
+.dark header .header__left,
+.dark header .header__right {
+  color: white;
+}
+.dark header .theme__toggle {
+  background-color: white;
+}
+.dark header .theme__toggle .switch {
+  background-color: black;
+  right: 1px;
+  left: auto;
+}
+.dark main #todos .noTasks {
+  background-color: white;
+  color: black;
+}
+.dark main #todos .todo .content {
+  background-color: white;
+  color: black;
+}
+.dark main #todos .todo .actions div:hover {
+  background-color: white;
+}
+.dark main .plus {
+  background-color: white;
+  color: black;
 }
