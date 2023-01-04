@@ -33,44 +33,6 @@ function setTheme(theme: string) {
 	localStorage.setItem("todos", JSON.stringify(todos));
 })();
 
-// // Create a todo item
-// function createTodoItem({ data, priority, status }: any) {
-// 	let todos = document.querySelector("#todos") as HTMLDivElement;
-// 	let todo = document.createElement("article");
-// 	todo.classList.add("todo");
-
-// 	let content = document.createElement("div");
-// 	content.classList.add("content");
-// 	let content_p = document.createElement("p");
-// 	content_p.textContent = data;
-// 	content.appendChild(content_p);
-
-// 	let actions = document.createElement("div");
-// 	actions.classList.add("actions");
-// 	let action_child1 = document.createElement("div");
-// 	action_child1.classList.add("delete");
-// 	let action_child1_icon = document.createElement("i");
-// 	action_child1_icon.classList.add("fa-solid", "fa-trash");
-// 	action_child1.addEventListener("click", () => deleteTask(data));
-
-// 	action_child1.appendChild(action_child1_icon);
-// 	let action_child2 = document.createElement("div");
-// 	let action_child2_checkbox = document.createElement("input");
-// 	action_child2_checkbox.setAttribute("type", "checkbox");
-// 	action_child2_checkbox.addEventListener("change", (e) => checkTask(data, e));
-// 	status == "done" && action_child2_checkbox.setAttribute("checked", "");
-// 	action_child2.appendChild(action_child2_checkbox);
-// 	actions.append(action_child1, action_child2);
-
-// 	todo.append(content, actions);
-// 	// Check to see if the todos was empty previously
-// 	let noTasks = document.querySelector(".noTasks");
-// 	if (noTasks) {
-// 		todos.removeChild(noTasks);
-// 	}
-// 	todos.appendChild(todo);
-// }
-
 // Show New Task Form
 (function () {
 	let plus = document.querySelector(".plus") as HTMLDivElement;
@@ -118,7 +80,3 @@ function setTheme(theme: string) {
 		}
 	});
 })();
-
-// // Mark task as done or incomplete
-
-// // Add drags to set priority
